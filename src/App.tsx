@@ -1,24 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Carousel } from './components';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Carousel
+        items={[
+          {
+            label: 'first',
+            tag: 'first',
+            imageSrc: 'https://source.unsplash.com/featured/?norway',
+            link: '/',
+          },
+          {
+            label: 'second',
+            tag: 'second',
+            imageSrc: 'https://source.unsplash.com/featured/?poland',
+            link: '/',
+          },
+          {
+            label: 'third',
+            tag: 'third',
+            imageSrc: 'https://source.unsplash.com/featured/?fiji',
+            link: '/',
+          },
+        ]}
+      />
     </div>
   );
 }

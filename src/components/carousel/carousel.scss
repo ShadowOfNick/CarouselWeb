@@ -1,0 +1,84 @@
+.carousel {
+
+  &-item {
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: 15px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    text-decoration: none;
+    color: #fff;
+    transition-property: width, margin;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 2;
+    
+    &--hidden {
+      margin: 0;
+      width: 0;
+    }
+
+    &--highlighted {
+      background-color: rebeccapurple;
+      color: #fff;
+      width: 100%;
+    }
+
+    &__content {
+      height: 530px;
+      background-position: center;
+      background-size: cover;
+
+      &__label {
+        font-size: 60px;
+        margin: 0;
+        padding-top: 150px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    overflow: initial;
+    flex-wrap: nowrap;
+
+    &__item-box {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      flex-wrap: nowrap;
+    }
+
+    &__control {
+      display: flex;
+      gap: 8px;
+      position: absolute;
+      z-index: 3;
+      flex-direction: row;
+      top: 32px;
+      right: 32px;
+
+      &__item {
+        color: #fff;
+        padding: 5px 16px;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: none;
+        border-radius: 100px;
+        cursor: pointer;
+        transition-property: color, background-color;
+        transition-duration: .2s;
+        transition-timing-function: ease-in-out;
+
+        &:hover,
+        &--active {
+          color: rebeccapurple;
+          background-color: #ccc;
+        }
+      }
+    }
+  }
+}
